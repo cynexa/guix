@@ -66,3 +66,9 @@ body {
     text-decoration: none;
     color: #fff;
 }
+
+.nav-menu li a:hover {
+    text-decoration: wavy;
+    color: rgb(0, 255, 166);
+    text-shadow: 0px 6px 7px rgb(0, 255, 221);
+}
