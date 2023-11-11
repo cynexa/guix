@@ -72,3 +72,11 @@ body {
     color: rgb(0, 255, 166);
     text-shadow: 0px 6px 7px rgb(0, 255, 221);
 }
+
+/* Base Top */
+
+.landing_top {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
