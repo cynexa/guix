@@ -4,50 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/guix.css">
-    <title>Log In | GuiX</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Event Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .event-list {
+            display: flex;
+        }
+
+        .date {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .timetable {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="base-nav">
-        <div class="top-logo">
-            <h1>BWU AISS</h1>
-            <p>TEST PAGE 2023</p>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Broad Focus</a></li>
-            <li><a href="#">Speaker</a></li>
-            <li><a href="#">Schedule</a></li>
-            <li><a href="#">Sponsor</a></li>
-            <li><a href="#">Excellence Awards</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Contacts</a></li>
-        </ul>
-    </nav>
-    <div class="landing_top">
-
-        <div class="landing_top_text">
-
-            <div class="ltt_top">
-                <h2>AISS</h2>
-                <h2>2023</h2>
-            </div>
-
-            <div class="ltt_bottom">
-
-                <h4>Annual Information Security Summit</h4>
-
-                <div class="ltt_bottom_down">
-                    <p>19 Dec - 21 Dec</p>
-                    <p>Leela Ambience</p>
-                    <p>@XYZ_Connect</p>
-                </div>
-            </div>
-        </div>
-
-        <img src="" alt="">
+    <div class="event-list">
+        <div class="date" onclick="showTimetable('day1')">Day 1</div>
+        <div class="date" onclick="showTimetable('day2')">Day 2</div>
     </div>
+
+    <div class="timetable" id="day1">
+        <!-- Day 1 timetable goes here -->
+    </div>
+
+    <div class="timetable" id="day2">
+        <!-- Day 2 timetable goes here -->
+    </div>
+    <script>
+        function showTimetable(day) {
+            const timetables = document.querySelectorAll('.timetable');
+            timetables.forEach(timetable => timetable.style.display = 'none');
+
+            const selectedTimetable = document.getElementById(day);
+            selectedTimetable.style.display = 'block';
+        }
+    </script>
 </body>
 
 </html>
