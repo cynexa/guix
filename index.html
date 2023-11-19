@@ -1,58 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <title>Event Timetable</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        .event-list {
-            display: flex;
-        }
-
-        .date {
-            padding: 10px;
-            margin: 5px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-        }
-
-        .timetable {
-            display: none;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="event-list">
-        <div class="date" onclick="showTimetable('day1')">Day 1</div>
-        <div class="date" onclick="showTimetable('day2')">Day 2</div>
-    </div>
-
-    <div class="timetable" id="day1">
-        <!-- Day 1 timetable goes here -->
-    </div>
-
-    <div class="timetable" id="day2">
-        <!-- Day 2 timetable goes here -->
-    </div>
-    <script>
-        function showTimetable(day) {
-            const timetables = document.querySelectorAll('.timetable');
-            timetables.forEach(timetable => timetable.style.display = 'none');
-
-            const selectedTimetable = document.getElementById(day);
-            selectedTimetable.style.display = 'block';
-        }
-    </script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MatrixGreen</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h3>MatrixGreen</h3>
+        <p>Lorem ipsum dolor adipisicing.</p>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="login">Log In</a>
+    </header>
+  </body>
 </html>
